@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-1363fe80","path":"/docs/changelog.html","title":"更新日志","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"v2.0 (2022.8.14)","slug":"v2-0-2022-8-14","link":"#v2-0-2022-8-14","children":[]}],"git":{},"filePathRelative":"docs/changelog.md"}');export{e as data};

@@ -1,0 +1,14 @@
+{
+  "name": "minitoolbox.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "梦辰 <s3224815186@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.60"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}

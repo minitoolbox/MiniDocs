@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-caf2f45a","path":"/docs/notes/math/20220703.html","title":"法向量","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"公式","slug":"公式","link":"#公式","children":[]},{"level":2,"title":"求解步骤","slug":"求解步骤","link":"#求解步骤","children":[]}],"git":{},"filePathRelative":"docs/notes/math/20220703.md"}');export{t as data};

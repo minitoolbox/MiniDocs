@@ -1,6 +1,8 @@
 import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
 import { searchPlugin } from '@vuepress/plugin-search'
+import { copyCodePlugin } from "vuepress-plugin-copy-code2";
+import { copyrightPlugin } from "vuepress-plugin-copyright2";
 
 export default defineUserConfig({
     lang: 'zh-CN',
@@ -54,9 +56,18 @@ export default defineUserConfig({
         searchPlugin({
             locales: {
                 '/': {
-                  placeholder: '搜索',
+                    placeholder: '搜索',
                 },
-              },
+            },
+        }),
+        copyCodePlugin({
+            showInMobile: true,
+        }),
+        copyrightPlugin({
+            author: "梦辰",
+            license: "MIT",
+            canonical: "https://minitoolbox.github.io",
+            global: true,
         }),
     ],
 })

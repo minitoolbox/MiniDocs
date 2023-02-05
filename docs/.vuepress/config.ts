@@ -1,27 +1,19 @@
 import { defineUserConfig } from 'vuepress'
-import { defaultTheme } from '@vuepress/theme-default'
+import { hopeTheme } from "vuepress-theme-hope";
 import { searchPlugin } from '@vuepress/plugin-search'
-import { copyCodePlugin } from "vuepress-plugin-copy-code2";
-import { copyrightPlugin } from "vuepress-plugin-copyright2";
 
 export default defineUserConfig({
     lang: 'zh-CN',
     title: '迷你开发者工具箱',
     description: '为迷你世界开发者而生的一款工具箱APP',
     head: [['link', { rel: 'icon', href: '/images/icon.png' }]],
-    theme: defaultTheme({
+    theme: hopeTheme({
         logo: '/images/hero.png',
-        sidebarDepth: 4,
         repo: 'https://github.com/minitoolbox/minitoolbox.github.io',
-        editLinkText: "在Github上编辑此页",
         docsRepo: 'https://github.com/minitoolbox/minitoolbox.github.io',
         docsBranch: 'main',
         docsDir: 'docs',
         editLinkPattern: ':repo/edit/:branch/:path',
-        lastUpdatedText: "上次更新",
-        contributorsText: "贡献者",
-        notFound: ["此页面不存在或已被删除！"],
-        backToHome: "点我返回首页",
         navbar: [
             // NavbarItem
             {
@@ -51,23 +43,26 @@ export default defineUserConfig({
                 ],
             },
         ],
+        plugins: {
+            copyCode: {},
+            copyright: {
+                global: true,
+                author: "梦辰",
+                license: "MIT",
+            },
+            comment: {
+                provider: "Waline",
+                serverURL: "https://minitoolbox.up.railway.app/",
+            },
+        },
     }),
     plugins: [
         searchPlugin({
             locales: {
                 '/': {
-                    placeholder: '搜索',
+                    placeholder: '搜索文档',
                 },
             },
-        }),
-        copyCodePlugin({
-            showInMobile: true,
-        }),
-        copyrightPlugin({
-            author: "梦辰",
-            license: "MIT",
-            canonical: "https://minitoolbox.github.io",
-            global: true,
         }),
     ],
 })

@@ -62,7 +62,7 @@ jobs:
       - name: 设置环境
         uses: actions/configure-pages@v2
         with:
-          path: /
+          path: dist
       - name: 上传物料
         uses: actions/upload-pages-artifact@v1
         with:

@@ -34,7 +34,7 @@ jobs:
           yarn
       - name: 构建静态文档
         run: |
-          yarn build
+          yarn docs:build
           git add .
           git commit -m "静态部署"
       - name: 推送物料

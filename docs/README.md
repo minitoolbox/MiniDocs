@@ -29,6 +29,10 @@ QQ：3224815186
 抖音：Tatsuki丶梦辰  
 哔哩哔哩：Tatsuki丶梦辰
 
+::: tip
+本文档由远赤协助运营
+点此前往[和圈APP](https://forskyinn.top)
+:::
 ## 其他
 
 [点我查看文档更新日志](/docs/changelog.md)

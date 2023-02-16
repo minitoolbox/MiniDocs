@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 heroText: 迷你开发者工具箱
 tagline: 一款专为迷你世界开发者而生的工具箱APP。
-heroImage: /images/hicon.png
+heroImage: /images/icon.png
 ---
 
 # 迷你开发者工具箱

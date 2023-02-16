@@ -68,6 +68,6 @@ export default defineUserConfig({
                 },
             },
         }),
-        blog: true,
+        blog(true),
     ],
 })

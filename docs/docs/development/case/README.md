@@ -5,6 +5,6 @@ interface SidebarDirInfo {
    *
    * @default README.md 标题
    */
-  text?: 综合案例;
+  text: 综合案例;
 }
 ---

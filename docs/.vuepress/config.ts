@@ -7,6 +7,10 @@ export default defineUserConfig({
     title: '迷你开发者工具箱',
     description: '为迷你世界开发者而生的一款工具箱APP',
     head: [['link', { rel: 'icon', href: '/images/icon.png' }]],
+    sidebar: {
+        "/foo/": "structure",
+        "/bar/": "structure",
+    },
     theme: hopeTheme({
         logo: '/images/hero.png',
         repo: 'https://github.com/minitoolbox/minitoolbox.github.io',

@@ -5,6 +5,6 @@ interface SidebarDirInfo {
    *
    * @default README.md 标题
    */
-  text: "脚本";
+  text: 脚本
 }
 ---

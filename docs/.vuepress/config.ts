@@ -58,6 +58,7 @@ export default defineUserConfig({
                 provider: "Waline",
                 serverURL: "https://minitoolbox.up.railway.app/",
             },
+            blog: true,
         },
     }),
     plugins: [
@@ -68,6 +69,5 @@ export default defineUserConfig({
                 },
             },
         }),
-        blog(true),
     ],
 })

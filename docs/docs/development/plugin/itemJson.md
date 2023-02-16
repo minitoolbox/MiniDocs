@@ -1,3 +1,8 @@
+---
+tag:
+  - 插件
+---
+
 # 道具json
 
 ## 技能 (Functions)

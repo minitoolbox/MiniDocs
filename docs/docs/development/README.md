@@ -5,6 +5,6 @@ interface SidebarDirInfo {
    *
    * @default README.md 标题
    */
-  text: 开发教程
+  text?: 开发教程
 }
 ---

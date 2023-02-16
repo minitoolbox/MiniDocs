@@ -68,5 +68,6 @@ export default defineUserConfig({
                 },
             },
         }),
+        blog: true,
     ],
 })

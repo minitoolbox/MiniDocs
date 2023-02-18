@@ -2,12 +2,28 @@
 home: true
 layout: BlogHome
 heroText: 迷你开发者工具箱
-tagline: 一款专为迷你世界开发者而生的工具箱APP。
+tagline: 为迷你世界开发者而生的工具箱APP
 heroImage: /images/icon.png
+projects:
+  - name: 开发者工具箱
+    desc: 一款专为迷你世界开发者而生的工具箱APP
+    link: https://minidocs.skyinncloud.top/
+    icon: /images/icon.png
+
+  - name: 和圈APP
+    desc: 一个学习社区
+    link: https://forskyinn.top/
+    icon: /images/icon_hamonious_one.png
+
+  - name: 星光工作室
+    desc: 这是一个好的工作室！
+    link: https://ustarry.github.io/
+    icon: /images/starlight_avator.png
+
 ---
 
 # 迷你开发者工具箱
-> 一款专为迷你世界开发者而生的工具箱APP。
+> 一款专为迷你世界开发者而生的工具箱APP
 
 ## 概述
 迷你开发者工具箱 可以帮你简化游戏开发过程，不同于 海螺壳、迷你檬 等其他辅助软件，迷你开发者工具箱 致力于为开发者们提供更加快捷方便的开发体验。工具箱内置了多种编辑器以及各种实用工具，在一定程度上可以简化你的游戏开发过程。

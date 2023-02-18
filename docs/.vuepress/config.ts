@@ -56,7 +56,7 @@ export default defineUserConfig({
             },
             comment: {
                 provider: "Waline",
-                serverURL: "https://minitoolbox.up.railway.app/",
+                serverURL: "https://waline.minidocs.skyinncloud.top/",
             },
             blog: true,
         },

@@ -13,7 +13,9 @@
 
 
 ## 综合案例
-* [中国象棋](/docs/development/case/ChineseChess.md)
+* [中国象棋AI](/docs/development/case/ChineseChess.md)
+* [UI - 秒表](/docs/development/case/stopwatch.md)
+* [UI - 计算器](/docs/development/case/calculator.md)
 
 
 

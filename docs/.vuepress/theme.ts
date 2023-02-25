@@ -60,11 +60,8 @@ export default hopeTheme({
         },
     ],
     plugins: {
-        copyCode: {},
-        copyright: {
-            global: true,
-            author: "梦辰",
-            license: "MIT",
+        copyCode: {
+            showInMobile: true
         },
         comment: {
             provider: "Waline",

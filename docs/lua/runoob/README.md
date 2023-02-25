@@ -1,0 +1,180 @@
+---
+author: 莫小仙
+isOriginal： false
+category:
+  - Lua
+tag:
+  - 脚本
+---
+
+# 新手教程
+
+::: tip
+此教程由莫小仙编写
+原文请在<https://ycbrmsn.com/>查看
+:::
+
+之前写了触发器的相关教程。现在决定写一个脚本的。这个教程的目标是帮助零基础的小伙伴能够写出脚本，写出能在地图里正常执行的脚本。至于能写到什么程度，则需要看自己的学习能力以及学习态度了。在这个教程中，我不会讲太多基础的东西。一方面是因为我自己本来就基础不好，菜得抠脚，另一方面是因为小伙伴主要目的也不是为了学语言而来。我会将重心放在怎么写一个能实现指定效果的脚本这个目标上。废话不多说，下面就开始吧。
+
+要在地图里写脚本，那就离不开游戏提供的API。API是应用编程接口的缩写，这个记住了也没什么用，把它理解成是一个工具就行。它能够提供多种功能，决定了你能在地图里面做什么。比如说你想要获得玩家的名字，就需要像下面这么写：
+
+``` lua
+local result, name = Player:getNickname(objid)
+```
+
+其中`Player:getNickname(objid)`就是游戏提供的`API`，`name`就是对应玩家的名字。为什么这么写现在不用了解太多，后面会慢慢讲解。
+
+说到这里，就顺便说一下官方的API文档了。目前我只知道两个：  
+<https://developers.mini1.cn/wiki/event.html>  
+<https://dev-wiki.mini1.cn/cyclopdeia?wikiMenuId=3&wikiId=1352>
+
+API文档需要经常看，这样才能知道哪些效果能实现而哪些效果做不了。下面来简单介绍一下API文档。
+
+打开第一个地址，在左侧的菜单中可以看到，主要是事件与接口：
+![](https://s2.loli.net/2023/02/25/jLnyWFPlVu1hmJw.png)
+
+其中的游戏规则列表可以暂时忽略不去管。
+
+要实现游戏中的一个效果，事件与接口缺一不可。所有的接口需要在事件中使用才有意义。下面来讲一个简单的效果“点石成金”怎么做。
+
+首先我们来分析一下这个效果：点石成金，就是点击石块后，将石块变为金块。如果转化为类似于程序的说法，就是当玩家点击方块时，如果该方块是石块，那么就将该方块变为金块。
+
+如果你对API比较熟悉后，那么分析后就知道我们需要用到：
+
+事件：玩家点击方块事件。
+条件：判断方块是否是石块。
+动作：将方块变成金块。
+方块ID：需要知道石块的ID与金块的ID。
+那么首先，我们来找到玩家点击方块事件：
+
+点击玩家事件：
+![](https://s2.loli.net/2023/02/25/jNunMWFBLSreJ83.png)
+
+在下面找到点击方块：
+![](https://s2.loli.net/2023/02/25/MOlbnAKe2Q5mFqG.png)
+
+至于该怎么用，我们参考一下文档上面的例子。比如我在上面找了一个：
+![](https://s2.loli.net/2023/02/25/rVBGctgUhbDioTn.png)
+
+因为例子是任意计时器发生变化事件的例子，那么我们来看看任意计时器发生变化的事件：
+![](https://s2.loli.net/2023/02/25/kftrIKozQDuSZsw.png)
+
+虽然我们现在可能不太明白，但是我们可以先来模仿着写。对比一下，我们大致可以把玩家点击方块事件写成这样：
+
+```lua
+local function Player_ClickBlock (event)
+  
+end
+ 
+ScriptSupportEvent:registerEvent([=[Player.ClickBlock]=], Player_ClickBlock)
+```
+
+当然，能写成这样的前提也是你需要对lua有一点点了解。如果你什么都不会，也没关系，先照着这样写出来。还是那句话，先来模仿。其中`function … ( … ) … end`是函数的结构。
+
+写成这样后，就已经把事件写好了。这里的文档缺少点说明，我来补充一下：
+![](https://s2.loli.net/2023/02/25/hL1cMGAqzPKCeSD.png)
+
+右边五个东西分别代表：玩家id、方块id、x坐标、y坐标、z坐标，其中在这个事件里的坐标是指方块的位置坐标。
+
+下面来写条件。因为要判断是不是石块，我们需要去查询石块的id。
+
+::: tip
+官方文档的ID并不完整，需要获取更多ID请使用工具箱内置的`ID查询工具`
+:::
+
+先点击左侧的ID查询：
+![](https://s2.loli.net/2023/02/25/m4k3OzYjwqAJ5Mc.png)
+
+选择方块表数据：
+![](https://s2.loli.net/2023/02/25/DrbmlXgWe6wat1M.png)
+
+进去后我找到了岩石的ID：
+![](https://s2.loli.net/2023/02/25/R7LpN4zTsmFukVb.png)
+
+顺便找出金块的ID：
+![](https://s2.loli.net/2023/02/25/9UhFIjGJSikXscl.png)
+
+然后来写条件：
+
+```lua
+local function Player_ClickBlock (event)
+  if event.blockid == 104 then
+    
+  end
+end
+ 
+ScriptSupportEvent:registerEvent([=[Player.ClickBlock]=], Player_ClickBlock)
+```
+
+这里的条件结构就是`if … then … end`。不理解没关系，先照着写。
+
+最后的动作，我们是需要替换方块，于是我们来找替换方块API。
+
+点击左侧的方块管理接口：
+![](https://s2.loli.net/2023/02/25/7l9b5xcHTrgqvXV.png)
+
+在右侧找到替换方块：
+![](https://s2.loli.net/2023/02/25/aIXuj19NYiqkUOn.png)
+
+点击后跳到对应接口说明：
+![](https://s2.loli.net/2023/02/25/4E51Xdu8Mg9mQlC.png)
+
+这里的接口描述还算详细。目前接口文档中前四个参数有效。
+
+看完接口文档，我们可以把成金的动作补上了：
+
+```lua
+local function Player_ClickBlock (event)
+  if event.blockid == 104 then
+    Block:placeBlock(410, event.x, event.y, event.z, 0)
+  end
+end
+ 
+ScriptSupportEvent:registerEvent([=[Player.ClickBlock]=], Player_ClickBlock)
+```
+
+最后再来回顾一下。先在API文档上找到事件：
+![](https://s2.loli.net/2023/02/25/hL1cMGAqzPKCeSD.png)
+
+然后模仿例子写事件：
+
+```lua
+local function Player_ClickBlock (event)
+  
+end
+ 
+ScriptSupportEvent:registerEvent([=[Player.ClickBlock]=], Player_ClickBlock)
+```
+
+其中`[=[Player.ClickBlock]=]`中括号中的内容对应事件的名称，必须保持一致。Player_ClickBlock这个名字倒是可以随意改动，只要保证两处的名字一致，并且不违反语法规则。如果怕出问题，就可以将事件名字中间的点换成下划线这样的规则写。
+
+接下来是查找方块id，加上条件部分：
+
+```lua
+local function Player_ClickBlock (event)
+  if event.blockid == 104 then
+    
+  end
+end
+ 
+ScriptSupportEvent:registerEvent([=[Player.ClickBlock]=], Player_ClickBlock)
+```
+
+条件部分的结构是`if … then … end`。
+
+最后是找到方块替换接口：
+![](https://s2.loli.net/2023/02/25/nNfHUG6Syqd1vCe.png)
+
+补全动作部分：
+
+```lua
+local function Player_ClickBlock (event)
+  if event.blockid == 104 then
+    Block:placeBlock(410, event.x, event.y, event.z, 0)
+  end
+end
+ 
+ScriptSupportEvent:registerEvent([=[Player.ClickBlock]=], Player_ClickBlock)
+```
+
+到现在，可能还是不怎么明白。不过不要紧，先学会模仿。多照着例子写一写，慢慢地就能明白一点。有言曰：读书百遍，其义自见。

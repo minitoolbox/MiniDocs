@@ -1,4 +1,5 @@
 ---
+text: 新手教程
 author: 莫小仙
 category:
   - Lua
@@ -6,10 +7,10 @@ tag:
   - 脚本
 ---
 
-# 新手教程
+# 简介
 
 ::: tip
-此教程由莫小仙编写
+此教程由莫小仙编写  
 原文请在<https://ycbrmsn.com/>查看
 :::
 
@@ -30,6 +31,7 @@ local result, name = Player:getNickname(objid)
 API文档需要经常看，这样才能知道哪些效果能实现而哪些效果做不了。下面来简单介绍一下API文档。
 
 打开第一个地址，在左侧的菜单中可以看到，主要是事件与接口：
+
 ![](https://s2.loli.net/2023/02/25/jLnyWFPlVu1hmJw.png)
 
 其中的游戏规则列表可以暂时忽略不去管。
@@ -47,15 +49,19 @@ API文档需要经常看，这样才能知道哪些效果能实现而哪些效�
 那么首先，我们来找到玩家点击方块事件：
 
 点击玩家事件：
+
 ![](https://s2.loli.net/2023/02/25/jNunMWFBLSreJ83.png)
 
 在下面找到点击方块：
+
 ![](https://s2.loli.net/2023/02/25/MOlbnAKe2Q5mFqG.png)
 
 至于该怎么用，我们参考一下文档上面的例子。比如我在上面找了一个：
+
 ![](https://s2.loli.net/2023/02/25/rVBGctgUhbDioTn.png)
 
 因为例子是任意计时器发生变化事件的例子，那么我们来看看任意计时器发生变化的事件：
+
 ![](https://s2.loli.net/2023/02/25/kftrIKozQDuSZsw.png)
 
 虽然我们现在可能不太明白，但是我们可以先来模仿着写。对比一下，我们大致可以把玩家点击方块事件写成这样：
@@ -71,6 +77,7 @@ ScriptSupportEvent:registerEvent([=[Player.ClickBlock]=], Player_ClickBlock)
 当然，能写成这样的前提也是你需要对lua有一点点了解。如果你什么都不会，也没关系，先照着这样写出来。还是那句话，先来模仿。其中`function … ( … ) … end`是函数的结构。
 
 写成这样后，就已经把事件写好了。这里的文档缺少点说明，我来补充一下：
+
 ![](https://s2.loli.net/2023/02/25/hL1cMGAqzPKCeSD.png)
 
 右边五个东西分别代表：玩家id、方块id、x坐标、y坐标、z坐标，其中在这个事件里的坐标是指方块的位置坐标。
@@ -82,15 +89,19 @@ ScriptSupportEvent:registerEvent([=[Player.ClickBlock]=], Player_ClickBlock)
 :::
 
 先点击左侧的ID查询：
+
 ![](https://s2.loli.net/2023/02/25/m4k3OzYjwqAJ5Mc.png)
 
 选择方块表数据：
+
 ![](https://s2.loli.net/2023/02/25/DrbmlXgWe6wat1M.png)
 
 进去后我找到了岩石的ID：
+
 ![](https://s2.loli.net/2023/02/25/R7LpN4zTsmFukVb.png)
 
 顺便找出金块的ID：
+
 ![](https://s2.loli.net/2023/02/25/9UhFIjGJSikXscl.png)
 
 然后来写条件：
@@ -110,12 +121,15 @@ ScriptSupportEvent:registerEvent([=[Player.ClickBlock]=], Player_ClickBlock)
 最后的动作，我们是需要替换方块，于是我们来找替换方块API。
 
 点击左侧的方块管理接口：
+
 ![](https://s2.loli.net/2023/02/25/7l9b5xcHTrgqvXV.png)
 
 在右侧找到替换方块：
+
 ![](https://s2.loli.net/2023/02/25/aIXuj19NYiqkUOn.png)
 
 点击后跳到对应接口说明：
+
 ![](https://s2.loli.net/2023/02/25/4E51Xdu8Mg9mQlC.png)
 
 这里的接口描述还算详细。目前接口文档中前四个参数有效。
@@ -133,6 +147,7 @@ ScriptSupportEvent:registerEvent([=[Player.ClickBlock]=], Player_ClickBlock)
 ```
 
 最后再来回顾一下。先在API文档上找到事件：
+
 ![](https://s2.loli.net/2023/02/25/hL1cMGAqzPKCeSD.png)
 
 然后模仿例子写事件：
@@ -162,6 +177,7 @@ ScriptSupportEvent:registerEvent([=[Player.ClickBlock]=], Player_ClickBlock)
 条件部分的结构是`if … then … end`。
 
 最后是找到方块替换接口：
+
 ![](https://s2.loli.net/2023/02/25/nNfHUG6Syqd1vCe.png)
 
 补全动作部分：

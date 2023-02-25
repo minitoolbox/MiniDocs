@@ -1,5 +1,6 @@
 ---
-text: 新手教程
+dir:
+  - text: 新手教程
 author: 莫小仙
 category:
   - Lua

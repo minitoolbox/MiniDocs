@@ -8,7 +8,7 @@ export default hopeTheme({
     },
     docsDir: "docs",
     displayFooter: true,
-    copyright: "迷你开发者工具箱 | Copyright © 2021-2023 梦辰",
+    copyright: "<div>迷你开发者工具箱</div><div>Copyright © 2021-2023 梦辰</div>",
     logo: "/images/hero.png",
     repo: "https://github.com/tatsukimengchen/MiniDocs",
     docsRepo: "https://github.com/tatsukimengchen/MiniDocs",

@@ -34,11 +34,11 @@ export default hopeTheme({
         // NavbarItem
         {
             text: "使用帮助",
-            link: "/docs/help/quickstart.md",
+            link: "/help/quickstart.md",
         },
         {
             text: "开发教程",
-            link: "/docs/development/contents.md",
+            link: "/development/contents.md",
         },
         {
             text: "问题反馈",

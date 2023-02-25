@@ -1,6 +1,5 @@
 ---
 author: 莫小仙
-isOriginal： false
 category:
   - Lua
 tag:

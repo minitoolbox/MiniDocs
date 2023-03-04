@@ -1,5 +1,6 @@
 ---
 home: true
+sidebar: true
 layout: BlogHome
 heroText: 迷你开发者工具箱
 tagline: 为迷你世界开发者而生的工具箱APP
@@ -20,6 +21,10 @@ projects:
     link: https://ustarry.github.io/
     icon: /images/starlight_avator.png
 
+  - name: 莫小仙的博客
+    desc: 一位大佬的个人博客
+    link: https://ycbrmsn.com/
+    icon: /images/head.png
 ---
 
 # 迷你开发者工具箱

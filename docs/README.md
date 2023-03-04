@@ -1,6 +1,5 @@
 ---
 home: true
-sidebar: true
 layout: BlogHome
 heroText: 迷你开发者工具箱
 tagline: 为迷你世界开发者而生的工具箱APP

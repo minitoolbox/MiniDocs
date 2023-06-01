@@ -4,7 +4,6 @@ export default hopeTheme({
     hostname: "https://docs.mimeng.fun/",
     author: {
         name: "梦辰",
-        url: "https://minidocs.skyinncloud.top/",
         url: "https://docs.mimeng.fun/",
     },
     docsDir: "docs",

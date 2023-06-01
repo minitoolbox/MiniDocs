@@ -1,13 +1,13 @@
 ---
 home: true
 layout: BlogHome
-heroText: 迷你开发者工具箱
-tagline: 为迷你世界开发者而生的工具箱APP
+heroText: 迷梦工坊
+tagline: 为迷你世界创作者而生
 heroImage: /images/icon.png
 projects:
   - name: 开发者工具箱
     desc: 一款专为迷你世界开发者而生的工具箱APP
-    link: https://minidocs.skyinncloud.top/
+    link: /help/quickstart.md
     icon: /images/icon.png
 
   - name: 和圈APP
@@ -26,7 +26,7 @@ projects:
     icon: /images/head.png
 ---
 
-# 迷你开发者工具箱
+# 迷梦工坊
 > 一款专为迷你世界创作者而生的工具箱APP
 
 ## 概述

@@ -12,7 +12,7 @@ projects:
 
   - name: 和圈APP
     desc: 一个学习社区
-    link: https://forskyinn.top/
+    link: https://yc-hequan.com/
     icon: /images/icon_hamonious_one.png
 
   - name: 星光工作室
@@ -27,10 +27,10 @@ projects:
 ---
 
 # 迷你开发者工具箱
-> 一款专为迷你世界开发者而生的工具箱APP
+> 一款专为迷你世界创作者而生的工具箱APP
 
 ## 概述
-迷你开发者工具箱 可以帮你简化游戏开发过程，不同于 海螺壳、迷你檬 等其他辅助软件，迷你开发者工具箱 致力于为开发者们提供更加快捷方便的开发体验。工具箱内置了多种编辑器以及各种实用工具，在一定程度上可以简化你的游戏开发过程。
+迷梦工坊 可以帮你简化游戏开发过程，不同于 海螺壳、迷你檬 等其他辅助软件，迷梦工坊 致力于为开发者们提供更加快捷方便的开发体验。APP内置了多种编辑器以及各种实用工具，在一定程度上可以简化你的游戏开发过程。
 
 查看[使用帮助](/docs/help/quickstart.md)了解详细。
 
@@ -49,7 +49,7 @@ projects:
 
 由于文档启用了离线模式，因此只要你曾经打开过文档，即使在没有连接网络的条件下也能查看，不过如果某篇文章更新后，想要查看最新内容，需要手动刷新网页后才可查看
 
-文档源码已上传至[GitHub](https://github.com/TatsukiMengChen/devToolbox)
+文档源码已上传至[GitHub](https://github.com/TatsukiMengChen/MiniDocs)
 
 ## 联系作者
 QQ：3224815186  
@@ -59,7 +59,7 @@ QQ：3224815186
 
 ::: tip
 本文档由远赤协助运营
-点此前往[和圈APP](https://forskyinn.top)
+点此前往[和圈APP](https://yc-hequan.com/)
 :::
 ## 其他
 

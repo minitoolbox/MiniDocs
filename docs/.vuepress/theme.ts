@@ -1,14 +1,15 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
 export default hopeTheme({
-    hostname: "https://minidocs.skyinncloud.top/",
+    hostname: "https://docs.mimeng.fun/",
     author: {
         name: "梦辰",
         url: "https://minidocs.skyinncloud.top/",
+        url: "https://docs.mimeng.fun/",
     },
     docsDir: "docs",
     displayFooter: true,
-    copyright: "<div>迷你开发者工具箱</div><div>Copyright © 2021-2023 梦辰</div>",
+    copyright: "<div>迷梦工坊</div><div>Copyright © 2021-2023 梦辰</div>",
     logo: "/images/hero.png",
     repo: "https://github.com/tatsukimengchen/MiniDocs",
     docsRepo: "https://github.com/tatsukimengchen/MiniDocs",
@@ -19,7 +20,7 @@ export default hopeTheme({
         "/": {
           blog: {
             avatar: "http://q.qlogo.cn/headimg_dl?dst_uin=3224815186&spec=640&img_type=jpg",
-            description: "普通高中生、迷你开发者工具箱作者、迷你世界高级开发者",
+            description: "普通高中生、迷梦工坊作者、迷你世界高级开发者",
             medias: {
               QQ: "http://wpa.qq.com/msgrd?v=3&uin=3224815186&site=qq&menu=yes",
               BiliBili: "https://space.bilibili.com/399664428",
@@ -65,7 +66,7 @@ export default hopeTheme({
         },
         comment: {
             provider: "Waline",
-            serverURL: "https://waline.minidocs.skyinncloud.top/",
+            serverURL: "https://waline.docs.mimeng.fun/",
         },
         blog: {
         },

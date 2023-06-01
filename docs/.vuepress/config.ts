@@ -4,8 +4,8 @@ import theme from "./theme.js";
 
 export default defineUserConfig({
     lang: 'zh-CN',
-    title: '迷你开发者工具箱',
-    description: '为迷你世界开发者而生的一款工具箱APP',
+    title: '迷梦工坊',
+    description: '为迷你世界开发者而生',
     head: [['link', { rel: 'icon', href: '/images/icon.png' }]],
     theme,
     plugins: [

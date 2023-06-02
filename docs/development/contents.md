@@ -9,7 +9,9 @@
 * [实用脚本](/development/script/UsefulScript.md)
 * [封装游戏API](/development/script/EncapsulatedAPI.md)
 * [API挖掘助手](/development/script/APIMiningAssistant.md)
-* [游戏素材文件解密](/development/script/FileDec.md)
+* [游戏素材文件解密](/development/script/ResDec.md)
+* [游戏数据文件解密](/development/script/FileDec.md)
+* [KTX转PNG](/development/script/KTX2PNG.md)
 
 
 ## 综合案例

@@ -8,7 +8,7 @@ projects:
   - name: 开发者工具箱
     desc: 一款专为迷你世界开发者而生的工具箱APP
     link: /help/quickstart.md
-    icon: /images/icon.png
+    icon: /images/devToolbox.png
 
   - name: 和圈APP
     desc: 一个学习社区
